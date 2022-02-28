@@ -244,18 +244,54 @@ let cuisineName = dishes.map(function (el) {
   console.log(cuisineName);
 
     
-
-
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
+
+function problemEight() {
+    let vegDish = dishes.map(function (el) {
+      if (el.cuisine == "Vegetarian") {
+        return el.cuisine + " " + el.name;
+      }
+      else{
+          return 'meat'
+      }
+    });
+    return vegDish;
+  }
+  let green = problemEight();
+  console.log("These are the type of vegetarian cuisines: ",green);
+
+
 
 
 //BONUS
 //9. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
+
+function problemnine(){
+    let results = dishes.filter(function (el) {
+        if (el.ingredients.includes("chickpea")){
+          return true;
+        }
+        else{
+            return false
+        }})
+      return results;
+    };
+
+let chickPea = problemnine();
+console.log('Dishes with chickpea: ', chickPea)
+
+
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
 
 //10. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
+
+
+let result = dishes.reduce(function( total, el){
+    return total + el.servings;
+});
+console.log(result)
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
