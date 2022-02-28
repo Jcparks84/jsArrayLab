@@ -145,6 +145,22 @@ console.log('Vegetarian Foods:', VegetarianFood)
 //2. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
 
+function problemOne(){
+    let results = dishes.filter(function(el){
+        if(el.cuisine == "Vegetarian"){
+            return true;
+        }
+        else{
+            return false;
+        }})
+
+    return results
+}
+    
+
+let VegetarianFood = problemOne();
+console.log('Vegetarian Foods:', VegetarianFood)
+
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
 //Filter
 
