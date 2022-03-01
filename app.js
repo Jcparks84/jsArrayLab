@@ -269,17 +269,11 @@ function problemEight() {
 
 function problemnine(){
     let results = dishes.filter(function (el) {
-        if (el.ingredients.includes("chickpea")){
-          return true;
-        }
-        else{
-            return false
-        }})
-      return results;
-    };
+        if(el.ingredients.includes("chickpea"));
+        return results
+    }
 
-let chickPea = problemnine();
-console.log('Dishes with chickpea: ', chickPea)
+
 
 
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
@@ -289,9 +283,6 @@ console.log('Dishes with chickpea: ', chickPea)
 //Must use Reduce, not a loop.
 
 
-let result = dishes.reduce(function( total, el){
-    return total + el.servings;
-});
-console.log(result)
+
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
